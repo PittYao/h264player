@@ -33,6 +33,7 @@ type ConfigST struct {
 // ServerST struct
 type ServerST struct {
 	HTTPPort      string   `json:"http_port"`
+	HTTPSPort     string   `json:"https_port"`
 	ICEServers    []string `json:"ice_servers"`
 	ICEUsername   string   `json:"ice_username"`
 	ICECredential string   `json:"ice_credential"`

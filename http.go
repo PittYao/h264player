@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/rand"
+	"crypto/tls"
 	"encoding/json"
 	"fmt"
 	"github.com/deepch/vdk/av"
@@ -33,11 +34,44 @@ func ServeHTTP() {
 	// 静态文件代理
 	httpRouter.StaticFS("/web", http.Dir("web/static"))
 
-	// 启动web服务
-	err := httpRouter.Run(Config.Server.HTTPPort)
-	if err != nil {
-		log.Fatalln("启动web服务失败 ", err)
+	// 启动HTTP和HTTPS服务
+	go func() {
+		if err := runHTTPServer(httpRouter); err != nil {
+			log.Fatalln("启动HTTP服务失败: ", err)
+		}
+	}()
+
+	if err := runHTTPSServer(httpRouter); err != nil {
+		log.Fatalln("启动HTTPS服务失败: ", err)
 	}
+}
+
+func runHTTPServer(router *gin.Engine) error {
+	s := &http.Server{
+		Addr:           Config.Server.HTTPPort,
+		Handler:        router,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	return s.ListenAndServe()
+}
+
+func runHTTPSServer(router *gin.Engine) error {
+	// 配置TLS
+	tlsConfig := &tls.Config{
+		MinVersion: tls.VersionTLS12,
+	}
+
+	s := &http.Server{
+		Addr:           Config.Server.HTTPSPort,
+		Handler:        router,
+		TLSConfig:      tlsConfig,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	return s.ListenAndServeTLS("./ssl/ssl.cer", "./ssl/ssl.key")
 }
 
 // StreamPlayer stream player

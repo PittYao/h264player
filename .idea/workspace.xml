@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a523c6ab-574e-4c26-9bd2-6e714bd7647c" name="Changes" comment="" />
+    <list default="true" id="a523c6ab-574e-4c26-9bd2-6e714bd7647c" name="Changes" comment="feat(init):">
+      <change afterPath="$PROJECT_DIR$/ssl/ssl.cer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssl/ssl.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http.go" beforeDir="false" afterPath="$PROJECT_DIR$/http.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +27,7 @@
   </component>
   <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../../../sdk/go" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/h264player" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
@@ -29,6 +36,7 @@
   "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="2gqYPnWb7D2FzINRuRej9j8DLiD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,9 +50,9 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "D:/self_project/go/src/github.com/PittYao/h264player/config",
+    "last_opened_file_path": "D:/self_project/go/src/github.com/PittYao/h264player/ssl",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -53,6 +61,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\self_project\go\src\github.com\PittYao\h264player\ssl" />
       <recent name="D:\self_project\go\src\github.com\PittYao\h264player\config" />
       <recent name="D:\self_project\go\src\github.com\PittYao\h264player\web" />
       <recent name="D:\self_project\go\src\github.com\PittYao\h264player" />
@@ -90,8 +99,20 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="feat(init):" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(init):" />
   </component>
   <component name="VgoProject">
     <environment>
@@ -100,26 +121,5 @@
       </map>
     </environment>
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/http.go</url>
-          <line>64</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/http.go</url>
-          <line>63</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/http.go</url>
-          <line>176</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
