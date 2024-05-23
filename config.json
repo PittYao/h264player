@@ -1,0 +1,7 @@
+{
+  "server": {
+    "http_port": ":7779"
+  },
+  "streams": {
+  }
+}
